@@ -66,7 +66,7 @@ class App extends Component {
               <TabPane tabId="1">
                 <Row>
                   <Col sm="12">
-                    <h4>Tab 1 Contents</h4>
+                    <h4>Results</h4>
                     <Input type="textarea" name="text" id="exampleText" />
                   </Col>
                 </Row>
@@ -74,7 +74,7 @@ class App extends Component {
               <TabPane tabId="2">
                 <Row>
                   <Col sm="12">
-                    <h4>Tab 2 Contents</h4>
+                    <h4>Results Table</h4>
                     <ResultTable />
                   </Col>
                 </Row>
