@@ -80,9 +80,10 @@ class App extends Component {
       }
     }).then(res => {
       if (res.statusCode !== 200) return null;
+      // console.log(res.body);
       return JSON.parse(res.body);
     }).then(body => {
-      alert(JSON.stringify(body, null, 2));
+      // alert(JSON.stringify(body, null, 2));
       if (!body) return null;
       if (body.hits.total === 0) return null;
       this.setState({ results: body });
@@ -90,6 +91,7 @@ class App extends Component {
     });
 
   }; 
+
 
   render() {
     return (
@@ -173,7 +175,7 @@ class App extends Component {
               <TabPane tabId="2">
                 <Row>
                   <Col sm="12">
-                    <ResultTable />
+                    <ResultTable results={this.updateResults()} />
                   </Col>
                 </Row>
               </TabPane>
